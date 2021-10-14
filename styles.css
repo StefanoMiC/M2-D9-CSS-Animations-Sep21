@@ -1,0 +1,379 @@
+/* BOOTSTRAP HERE  */
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #0f171e;
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fade-in 3s 1s forwards;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+nav {
+  background-color: #0f171e;
+  background-image: -webkit-linear-gradient(
+    top,
+    #1b2530,
+    rgba(27, 37, 48, 0.85)
+  );
+  background-image: linear-gradient(180deg, #1b2530 0, rgba(27, 37, 48, 0.85));
+  background-repeat: repeat-x;
+}
+
+a {
+  color: #01a3db;
+}
+
+a:hover {
+  color: #14b5eb;
+}
+
+.navbar-dark .navbar-nav .active > .nav-link {
+  font-weight: 700;
+  border-bottom: 1px solid white;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  font-weight: 600;
+  padding-left: 0;
+  padding-right: 0;
+  margin: 8px;
+}
+
+.navbar-dark a {
+  color: white;
+}
+
+.navbar-light a {
+  color: black;
+}
+
+.navbar-brand img {
+  width: 120px;
+}
+
+nav .dropdown-toggle {
+  color: rgba(255, 255, 255, 0.65);
+}
+nav .dropdown-toggle:hover,
+nav .dropdown-toggle:focus {
+  color: white;
+}
+
+nav .dropdown-menu {
+  background-color: #252e39;
+  padding: 0;
+}
+
+nav .dropdown-item {
+  line-height: 20px;
+  color: #8197a4;
+  display: block;
+  padding: 14px 48px 14px 16px;
+  outline: 0;
+  border-bottom: 1px solid #323e4c;
+}
+nav .dropdown-item:last-child {
+  border: none;
+}
+
+nav .dropdown-divider {
+  border-top: 1px solid #323e4c;
+}
+
+nav .dropdown-item:focus,
+nav .dropdown-item:hover {
+  color: white;
+  background-color: transparent;
+}
+
+#toaster {
+  position: fixed;
+  opacity: 0;
+  top: 90px;
+  right: 10px;
+  z-index: 99;
+  padding: 1rem 2rem;
+  border-radius: 6px;
+  box-shadow: 0 6px 40px rgb(0 0 0 / 0.3);
+  animation: gradientSlide 4s ease infinite;
+  transition: opacity 0.3s ease-in;
+}
+
+#toaster.show {
+  opacity: 1;
+}
+
+.carousel-item img {
+  height: 250px;
+  object-fit: cover;
+}
+
+.truncate {
+  width: 50px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+/* .navbar-expand-lg .navbar-nav .nav-link {
+  padding-left: 0;
+  padding-right: 0;
+} */
+
+h4 {
+  font-size: 19px;
+  color: white;
+}
+
+@media (max-width: 575px) {
+  h4 {
+    font-size: 12px;
+  }
+}
+
+.prime-logo {
+  position: relative;
+  top: -3px;
+}
+
+.prime-badge {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.prime-title {
+  color: #00a8e1;
+  font-weight: 700;
+}
+
+.strive-card {
+  transform: scale(1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.infos-container {
+  position: absolute;
+  transform: translateY(-48px);
+  background: linear-gradient(rgba(27, 37, 48, 0), #1b2530 48px);
+  border-bottom-left-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.infos-container .infos-content {
+  padding: 48px 12px 24px;
+  transition: padding 0.3s ease;
+}
+
+.infos-content > h6,
+.infos-content p,
+.movie-footer {
+  font-size: 0.9rem;
+  opacity: 0;
+  transition: opacity 0.6s ease-in;
+}
+
+.infos-content > h6 {
+  transition-delay: 0.2s;
+}
+.infos-content p {
+  transition-delay: 0.4s;
+}
+.infos-content .movie-footer {
+  transition-delay: 0.6s;
+}
+
+.play-btn:not(:hover) {
+  background: black;
+}
+
+.play-btn {
+  background-color: black;
+  border: 2px solid white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: relative;
+  transform: translateX(-60px);
+  transition: transform 0.3s ease 0.4s;
+}
+
+.play-btn:hover {
+  border: none;
+  animation: gradientSlide 4s ease infinite;
+}
+
+.play-btn::before {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 2px;
+  margin: auto;
+  border-style: solid;
+  border-width: 7px 0 7px 10px;
+  border-color: transparent transparent transparent white;
+}
+
+.infos-container .infos-content > div > h6 {
+  transform: translateX(-46px);
+  transition: transform 0.3s cubic-bezier(0.45, 0, 0.3, 1) 0.4s;
+}
+
+.plus-btn {
+  display: block;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  transform: translateX(40px) rotate(160deg);
+  transition: transform 0.3s ease;
+}
+
+.plus-btn::before {
+  content: "";
+  width: 2px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  background-color: white;
+}
+
+.plus-btn::after {
+  content: "";
+  height: 2px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  background-color: white;
+}
+
+.infos-container .infos-content h6:not(.prime-title) {
+  font-weight: 700;
+}
+.infos-container .infos-content h6:not(.prime-title) + p {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.strive-card video {
+  display: none;
+}
+
+.strive-card:hover {
+  transform: scale(1.1);
+  z-index: 1;
+}
+
+.strive-card:hover video {
+  display: block;
+  border: 2px solid #00a8e1;
+  border-bottom: none;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.strive-card:hover .infos-container {
+  pointer-events: initial;
+  opacity: 1;
+
+  border: 2px solid #00a8e1;
+  border-top: none;
+}
+
+.strive-card:hover img[src$=".jpg"] {
+  display: none;
+}
+
+.strive-card:hover .infos-container .infos-content {
+  padding: 48px 16px 24px;
+}
+
+.strive-card:hover .infos-content h6,
+.strive-card:hover .infos-content p,
+.strive-card:hover .movie-footer {
+  opacity: 1;
+}
+
+.strive-card:hover .play-btn {
+  transform: translateX(0px);
+}
+
+.strive-card:hover .infos-container .infos-content > div > h6 {
+  transform: translateX(0);
+}
+
+.strive-card:hover .plus-btn {
+  transform: translateX(0) rotate(0);
+}
+
+.gradient {
+  background: linear-gradient(270deg, green 0%, yellow 100%);
+  background-size: 400% 400%;
+}
+
+@keyframes gradientSlide {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+footer {
+  text-align: center;
+  animation: gradientSlide 4s ease infinite;
+}
+
+footer .footer-logo {
+  display: inline-block;
+  width: 120px;
+  height: 48px;
+  background-image: url("../logo/strivevideo.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+footer ul {
+  list-style: none;
+}
+footer ul li {
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+
+footer ul:last-of-type {
+  color: rgba(255, 255, 255, 0.45);
+}
